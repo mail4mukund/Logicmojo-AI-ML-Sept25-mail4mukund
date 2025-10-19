@@ -1,6 +1,13 @@
 import pandas as pd
+from pathlib import Path
 
-pd.read_csv('C:\Learning\Logicmojo-AI-ML-Sept25-mail4mukund\Content\GoalDetails.csv')
+path_file=Path('../Content')/'Movie+Assignment+Data.csv'
+df=pd.read_csv(path_file)
+# df[df['content_rating']=='R']
+# print(df[df['content_rating']=='R'])
 
-df=pd.DataFrame()
-print(df)
+# canada_movies=df[df.Country=='Australia']
+# print(canada_movies)
+
+df['IFUS']=df['Country'].apply(lambda x: 'USA' if x=='USA' else 'Non-USA')
+print(df['IFUS'])
