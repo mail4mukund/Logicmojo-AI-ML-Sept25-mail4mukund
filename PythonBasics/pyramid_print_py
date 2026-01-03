@@ -1,0 +1,11 @@
+n=int(input('Enter max rows in pyramid: '))
+for i in range(n):
+    print(' '*(n-i-1)+'*' *(2*i+1))
+for i in range(n-2,-1,-1):
+    print(' '*(n-i-1)+'*'*(2*i+1))
+
+
+a=100;
+k='a'
+result=a*k
+print(result)
